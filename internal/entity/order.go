@@ -36,7 +36,7 @@ func (o *Order) Validate() error {
 	}
 
 	if o.tax <= 0 {
-		return errors.New("price must be greater than zero")
+		return errors.New("tax must be greater than zero")
 	}
 	return nil
 }
