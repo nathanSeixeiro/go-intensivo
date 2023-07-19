@@ -6,14 +6,13 @@ import (
 )
 
 func TestIfIdBlank(t *testing.T) {
-	//always tests in go start with Test word
 	order := Order{}
-	if order.Validate() == nil {
-		t.Error("ID id required")
-	}
+	assert.Error(t, order.Validate(), "id is required")
 }
 
-func TestWithTestifyIdBlank(t *testing.T) {
-	order := Order{}
-	assert.Error(t, order.Validate(), "id is req")
+func TestIfpriceIsBlank(t *testing.T){
+	order := Order{
+		ID: "1",
+	}
+	assert.Error(t, order.Validate(), "invalid price")
 }
