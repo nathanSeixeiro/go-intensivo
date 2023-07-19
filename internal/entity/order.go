@@ -2,7 +2,7 @@ package entity
 
 import "errors"
 
-// in Go we work without class but structs 
+// in Go we work without class but with structs 
 type Order struct {
 	ID     string
 	price  float64
