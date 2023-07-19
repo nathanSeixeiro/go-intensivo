@@ -35,3 +35,13 @@ func TestFinalprice(t *testing.T) {
 	order.CalculateFinalprice()
 	assert.Equal(t, 2.0, order.finalp)
 }
+func TestConstructor(t *testing.T) {
+	order, err := Constructor("1", 1, 1)
+	if err != nil {
+		assert.Error(t, err)
+	}
+	assert.NoError(t, order.Validate())
+	assert.Equal(t, "1", order.ID)
+	assert.Equal(t, 1.0, order.price)
+	assert.Equal(t, 1.0, order.tax)
+}
