@@ -21,7 +21,7 @@ func TestIfpriceIsBlank(t *testing.T) {
 func TestIfTaxIsBlank(t *testing.T) {
 	order := Order{
 		ID:    "1",
-		price: 1,
+		Price: 1,
 	}
 	assert.Error(t, order.CalculateFinalprice(), "price must be greater than zero")
 }
@@ -29,11 +29,11 @@ func TestIfTaxIsBlank(t *testing.T) {
 func TestFinalprice(t *testing.T) {
 	order := Order{
 		ID:    "1",
-		price: 1.0,
-		tax:   1.0,
+		Price: 1.0,
+		Tax:   1.0,
 	}
 	order.CalculateFinalprice()
-	assert.Equal(t, 2.0, order.finalp)
+	assert.Equal(t, 2.0, order.Finalp)
 }
 func TestConstructor(t *testing.T) {
 	order, err := Constructor("1", 1, 1)
@@ -42,6 +42,6 @@ func TestConstructor(t *testing.T) {
 	}
 	assert.NoError(t, order.Validate())
 	assert.Equal(t, "1", order.ID)
-	assert.Equal(t, 1.0, order.price)
-	assert.Equal(t, 1.0, order.tax)
+	assert.Equal(t, 1.0, order.Price)
+	assert.Equal(t, 1.0, order.Tax)
 }
