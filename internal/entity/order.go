@@ -32,11 +32,11 @@ func (o *Order) Validate() error {
 	}
 
 	if o.price <= 0 {
-		return errors.New("must be greater than zero")
+		return errors.New("price must be greater than zero")
 	}
 
 	if o.tax <= 0 {
-		return errors.New("must be greater than zero")
+		return errors.New("price must be greater than zero")
 	}
 	return nil
 }
