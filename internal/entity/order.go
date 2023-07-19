@@ -2,6 +2,7 @@ package entity
 
 import "errors"
 
+// in Go we work without class but structs 
 type Order struct {
 	ID     string
 	price  float64
@@ -23,6 +24,8 @@ func Constructor(id string, price, tax float64) (*Order, error){
 	return order, nil
 }
 
+// for the methods we use pointers and references for the struct 
+// Go don't have try/catch, we catching each error e and process it
 func (o *Order) Validate() error {
 	if o.ID == "" {
 		return errors.New("id is required")
