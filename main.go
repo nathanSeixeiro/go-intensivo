@@ -2,7 +2,8 @@ package main
 
 import (
 	"database/sql"
-	
+	"fmt"
+
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/nathanSeixeiro/go-intensivo/internal/infra/database"
 	usecases "github.com/nathanSeixeiro/go-intensivo/internal/useCases"
@@ -24,5 +25,5 @@ func main() {
 	if err != nil{
 		panic(err)
 	}
-	print(output)
+	fmt.Println(output)
 }
