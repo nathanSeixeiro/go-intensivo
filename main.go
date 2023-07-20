@@ -1,13 +1,28 @@
 package main
 
-import "github.com/nathanSeixeiro/go-intensivo/internal/entity"
+import (
+	"database/sql"
+	
+	_ "github.com/mattn/go-sqlite3"
+	"github.com/nathanSeixeiro/go-intensivo/internal/infra/database"
+	usecases "github.com/nathanSeixeiro/go-intensivo/internal/useCases"
+)
 
 func main() {
-	order, err := entity.Constructor("1", 9, 2)
-
+	db, err := sql.Open("sqlite3", "db.sqlite3")
 	if err != nil {
-		println(err.Error())
-	} else {
-		println(order.ID)
+		panic(err)
 	}
+	orderRepository := database.NewOrderRepository(db)
+	usecase := usecases.NewCalculateFinalPrice(orderRepository)
+	input := usecases.OrderInput{
+		ID: "1",
+		Price: 10.0,
+		Tax: 10.0,
+	}
+	output, err := usecase.Execute(input)
+	if err != nil{
+		panic(err)
+	}
+	print(output)
 }
