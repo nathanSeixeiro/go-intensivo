@@ -10,6 +10,12 @@ type OrderRepository struct {
 	Db *sql.DB
 }
 
+func NewOrderRepository(db *sql.DB) *OrderRepository {
+	return &OrderRepository{
+		Db: db,
+	}
+}
+
 func (r *OrderRepository) Save(order *entity.Order) error {
 	// if we wanna ignore one value using _
 	_, err := r.Db.Exec("INSERT INTO orders (id, price, tax, final_price) VALUES (?,?,?,?)",
