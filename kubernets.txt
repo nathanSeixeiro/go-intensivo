@@ -1,0 +1,10 @@
+kind create cluster
+kubectl get nodes
+
+kubectl apply -f k8s
+kubectl get pods
+
+kubectl get service
+
+run
+    kubectl port-forward svc/goapp 8888:8888
