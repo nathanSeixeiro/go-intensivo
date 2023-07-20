@@ -1,13 +1,29 @@
-# go-intensivo
-Codigo para entender conceitos da linguagem Go, kubernets, docker, clean archictecture, solid promovidos pelo [Wesley Wilians](https://www.linkedin.com/in/wesleywillians/) 
+<div align="center">
+  <img alt="go" width=200 height=200 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" />    
+  <h1 align="center">
+     Go-intensivo
+  </h1>
+</div>
 
-## Conhecimentos trabalhados (foguetinho)
+  Codigo para entender conceitos da linguagem Go, kubernets, docker, clean archictecture, SQLite promovidos pelo [Wesley Wilians](https://www.linkedin.com/in/wesleywillians/) 
+
+<div align="center" >  
+  <img  width=80 height=80 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" />
+  <img  width=80 height=80 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" />
+  
+  <img  width=80 height=80 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain-wordmark.svg" />
+  <img  width=80 height=80 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg" />
+          
+</div>
+
+## Conhecimentos trabalhados 🚀
 
 ### Go
 - Sintax básica
 - Multhreading / Go Routines
 - POO (baseado nas structs)
-
+- Integração com banco de dados
+  
 ### Rabbitmq 
 - Compreensão dos conceitos de fila
 - Criação de mensagens
