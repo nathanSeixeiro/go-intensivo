@@ -23,7 +23,7 @@
 - Multhreading / Go Routines
 - POO (baseado nas structs)
 - Integração com banco de dados
-  
+- 
 ### Rabbitmq 
 - Compreensão dos conceitos de fila
 - Criação de mensagens
@@ -45,3 +45,5 @@
 ### Kubernets
 - Criação de cluster
 - Deploy do projeto 
+---
+Feito por [Nathan Seixeiro](https://www.linkedin.com/in/nathan-seixeiro/) 👨🏻‍💻
